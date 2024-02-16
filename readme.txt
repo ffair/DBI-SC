@@ -1,19 +1,21 @@
 # Sparse Clustering for Customer Segmentation with High-dimensional Mixed-type Data
 
-This repository contains the official code for our proposed method, DBI-SC, and the experiments in our paper [Sparse Clustering for Customer Segmentation with High-dimensional Mixed-type Data].
+This folder contains data and code used in the paper [Sparse Clustering for Customer Segmentation with High-dimensional Mixed-type Data].
 
-## Dependencies
+
+#### Dependencies
 
 The code requires R >= 4.2.0. The R packages required are list in 'functions.R'.
 
-## Files
+#### Files
 
 'co_two.cpp' is the function to calculate co-occurence distance between any two levels.
 'dist_co.cpp' is the function to calculate the categorical part distance between any two samples.
 'functions.R' contains the algorithm of DBI-SC method.
 'examples.R' shows one simulation scenario when K=4 and the continuous variables are generated from p-generalized normal-polynomial distribution.
 
-## Usage
+
+#### Usage
 
 The code of DBI-SC method can be found in 'functions.R'.
 The R function COC() can be called to realize DBI-SC method after sourcing the file 'functions.R'.
@@ -33,16 +35,20 @@ Explanation of parameters of function COC():
 
 Explanation of output of function COC():
 
-- 'vs': the weights of continuous and categorical (dummy) variables. - 'Cs': the clustering results.- 'DBI.perfeature': the adjusted DBI for each continuous variable.- 'DBI.perfeaturegroup': the adjusted DBI for each categorical variable.- 'mDBI': the mDBI critrion of each iteration.
+- 'vs': the weights of continuous and categorical (dummy) variables. 
+- 'Cs': the clustering results.
+- 'DBI.perfeature': the adjusted DBI for each continuous variable.
+- 'DBI.perfeaturegroup': the adjusted DBI for each categorical variable.
+- 'mDBI': the mDBI critrion of each iteration.
 
-## Example
+#### Example
 
 In the 'example.R' file, we show one simulation scenario when K=4 and the continuous variables are generated from p-generalized normal-polynomial distribution.
 The other scenarios can be reproduced by adjusting the simulation data generation function generatesimd().
 
-# Acknowledgements
+#### Acknowledgements
 
-The code for 'SAS` algorithm in this repository was adapted from code in repository of [A Simple Approach to Sparse Clustering](https://github.com/victorpu/SAS_Hill_Climb).
+The code for 'SAS` algorithm in this folder was adapted from code in repository of [A Simple Approach to Sparse Clustering](https://github.com/victorpu/SAS_Hill_Climb).
 
 
 
